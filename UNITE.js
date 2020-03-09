@@ -1,24 +1,18 @@
-// UNITE
+// cd UNITE
 
 function unite(A, B)
 	{
 		var unt = [];
-		// console.log(A);
-		// console.log(B);
 		for( var i = 0; i < A.length; i++){
-			
-			if (B.indexOf(A[i] != -1)) {
-                if (unt.indexOf(A[i])) {
+                if (unt.indexOf(A[i])<0) {
                    unt.push(A[i])
                 }
-            }
-            if (A.indexOf(B[i] != -1)) {
-                if (unt.indexOf(B[i])) {
-                   unt.push(B[i])
+        }
+        for (var j = 0; j < B.length; j++)
+        {
+            if (unt.indexOf(B[j])<0) {
+                   unt.push(B[j])
                 }
-            } 
-            
-		}
-        console.log(unt);
+        }
 		return ("Результат объединения: "+unt);
 	}
